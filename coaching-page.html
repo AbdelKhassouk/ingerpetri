@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personlig Coaching | Inger Petri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="coaching-page-styles.css">
+</head>
+<body>
+
+    <header class="site-header" id="top">
+        <div class="container nav-container">
+          <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="Inger Petri Logo">
+          </a>
+          
+          <nav class="main-nav">
+            <ul class="nav-links">
+              <li class="nav-item has-dropdown">
+                <a href="#" class="nav-link">Samtaler og coaching <span class="dropdown-icon">▾</span></a>
+                <div class="dropdown-menu">
+                  <a href="coaching-page.html" class="dropdown-item">Individuelle forløb</a>
+                  <a href="parsamtaler.html" class="dropdown-item">Parsamtaler</a>
+                  <a href="stresspage.html" class="dropdown-item">Stress - din krop taler</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="bog.html" class="nav-link">Min bog</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://mastercoachingerpetri.simplero.com/page/269397" class="nav-link" target="_blank">Glad igen</a>
+              </li>
+            </ul>
+            <a href="#kontakt" class="cta-button">Kontakt mig</a>
+            <button class="mobile-menu-toggle" aria-label="Menu">
+              <span class="menu-bar"></span>
+              <span class="menu-bar"></span>
+              <span class="menu-bar"></span>
+            </button>
+          </nav>
+        </div>
+      </header>
+
+<!-- Mobile Drawer Menu -->
+<div class="mobile-drawer">
+  <div class="drawer-header">
+    <a href="index.html" class="logo">
+      <img src="images/logo.jpg" alt="Inger Petri Logo">
+    </a>
+    <button class="drawer-close" aria-label="Luk menu">✕</button>
+  </div>
+  
+  <nav class="drawer-nav">
+    <div class="drawer-section">
+      <div class="drawer-section-header">
+        <span>Samtaler og coaching</span>
+      </div>
+      <div class="drawer-section-content">
+        <a href="individuelt.html" class="drawer-link">Individuelle forløb</a>
+        <a href="parsamtaler.html" class="drawer-link">Parsamtaler</a>
+        <a href="stress.html" class="drawer-link">Stress - din krop taler</a>
+      </div>
+    </div>
+    
+    <a href="#min-bog" class="drawer-link">Min bog</a>
+    <a href="https://mastercoachingerpetri.simplero.com/page/269397" class="drawer-link" target="_blank">Glad igen</a>
+    
+    <div class="drawer-cta">
+      <a href="#kontakt" class="cta-button drawer-button">Kontakt mig</a>
+    </div>
+  </nav>
+</div>
+
+<div class="mobile-drawer-overlay"></div>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-content fade-in">
+      <h1 class="hero-title">Tag førertrøjen på – og bliv helten i dit eget liv</h1>
+      <p class="hero-subtitle">Stress, selvværd eller følelsen af at have mistet dig selv? Jeg hjælper dig med at tage styringen tilbage og skabe et liv i balance – med dig selv bag rattet.</p>
+      <a href="#kontakt" class="hero-cta">
+        Book en gratis afklarende samtale
+        <span class="arrow">→</span>
+      </a>
+    </div>
+    <div class="hero-image fade-in delay-2">
+      <img src="depri.jpg" alt="Inger Petri coaching i naturen">
+    </div>
+  </div>
+</section>
+
+<!-- Recognize the Problem Section -->
+<section class="problem-section">
+  <div class="problem-container">
+    <h2 class="problem-title fade-in">Føles det som om livet kører – men uden dig bag rattet?</h2>
+    <p class="problem-text fade-in delay-1">
+      Du klarer dig, men du trives ikke. Du gør alt det rigtige, men føler dig tom, presset eller låst fast. Måske mærker du det som <span class="problem-highlight">stress</span>, <span class="problem-highlight">uro</span>, <span class="problem-highlight">søvnproblemer</span> eller en konstant indre kritik. Eller måske er du bare kørt træt og længtes efter noget andet – noget mere ægte.
+    </p>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+  <div class="benefits-container">
+    <h2 class="benefits-title fade-in">Et forløb med plads til dig – og med fokus på varig forandring</h2>
+    
+    <div class="benefits-grid">
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h3 class="benefit-title">Klarhed over hvad der dræner og stresser dig</h3>
+        <p class="benefit-text">Sammen identificerer vi præcis, hvad der tapper din energi og hvordan du kan skabe positive ændringer i dit liv.</p>
+      </div>
+      
+      <div class="benefit-card fade-in delay-1">
+        <div class="benefit-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path>
+            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+          </svg>
+        </div>
+        <h3 class="benefit-title">Konkrete redskaber til at håndtere stress og tankemylder</h3>
+        <p class="benefit-text">Du får praktiske metoder til at håndtere stress, dæmpe tankemylder og finde ro i en travl hverdag.</p>
+      </div>
+      
+      <div class="benefit-card fade-in delay-2">
+        <div class="benefit-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </div>
+        <h3 class="benefit-title">Styrket selvværd og tro på dig selv</h3>
+        <p class="benefit-text">Opbyg en stærkere selvfølelse og lær at sætte grænser, så du kan blive den bedste version af dig selv.</p>
+      </div>
+      
+      <div class="benefit-card fade-in delay-3">
+        <div class="benefit-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <h3 class="benefit-title">Trygge samtaler med plads til alt</h3>
+        <p class="benefit-text">Her er plads til alt det, du ikke kan sige andre steder, i et fortroligt og dømmefrit rum.</p>
+      </div>
+      
+      <div class="benefit-card fade-in delay-2">
+        <div class="benefit-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <h3 class="benefit-title">En ærlig sparringspartner</h3>
+        <p class="benefit-text">Jeg ser dig og hjælper dig med at blive helten i dit eget liv igen, med ærlighed og professionel vejledning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Coach Section -->
+<section class="coach-section">
+  <div class="coach-container">
+    <div class="coach-image fade-in">
+      <img src="depri1.jpg" alt="Inger Petri Coach Portræt">
+    </div>
+    <div class="coach-content fade-in delay-1">
+      <h2 class="coach-title">Jeg ved, hvordan det føles – og hvordan du finder tilbage</h2>
+      <p class="coach-text">
+        Jeg har selv stået i det. Jeg ved, hvordan det er at miste sig selv i forventninger, stress eller lavt selvværd. Derfor møder jeg dig med ærlighed, varme og erfaring – både fra mit eget liv og fra mit arbejde med mange mænd og kvinder i samme situation som dig.
+      </p>
+      <p class="coach-text">
+        Som certificeret mastercoach med speciale i stress og selvværd har jeg hjulpet hundredvis af mennesker med at genvinde kontrollen over deres liv. Min tilgang er både professionel og personlig, og jeg skaber et trygt rum, hvor du kan udforske dine udfordringer og finde nye veje fremad.
+      </p>
+      <p class="coach-quote">
+        "Min mission er at hjælpe dig med at finde tilbage til dig selv – så du kan blive den bedste version af dig selv og leve et liv i balance."
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section id="kontakt" class="cta-section">
+  <div class="cta-container">
+    <div class="cta-box fade-in">
+      <h2 class="cta-title">Skal det være nu, du vælger dig selv til?</h2>
+      <p class="cta-text">
+        Lad os tage en uforpligtende snak, og finde ud af, om jeg er den rette til at hjælpe dig på vej. Du har intet at tabe – og måske alt at vinde.
+      </p>
+      <p class="cta-highlight">
+        Du er i gang. Du har allerede gjort det vigtigste – du har stoppet op og mærket efter.
+      </p>
+      <p class="cta-text">
+        Nu handler det bare om at fortsætte. Book din samtale eller ring til mig direkte – du har allerede taget første skridt, og jeg er klar til at tage det næste sammen med dig.
+      </p>
+      <div class="cta-buttons">
+        <a href="#booking-system" class="cta-main-button">
+          Book en gratis og uforpligtende samtale
+          <span class="arrow">→</span>
+        </a>
+        <a href="tel:+4561760657" class="cta-phone">
+          <span class="cta-phone-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </span>
+          Ring direkte på 61 76 06 57
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-wrapper">
+      <div class="contact-image">
+        <img src="images/iphjemme.jpg" alt="Inger Petri - Mastercoach">
+      </div>
+      
+      <div class="contact-content">
+        <h2 class="section-title fade-in">Kontakt mig</h2>
+        <p class="contact-intro fade-in delay-1">Udfyld formularen nedenfor, så vender jeg tilbage til dig hurtigst muligt. Eller book en gratis afklarende samtale, hvor vi kan tale om dine udfordringer og hvordan jeg kan hjælpe dig.</p>
+        
+        <div class="contact-info fade-in delay-2">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <div class="contact-text">
+              <h3>Telefon</h3>
+              <p><a href="tel:+4561760657">61 76 06 57</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+            <div class="contact-text">
+              <h3>Email</h3>
+              <p><a href="mailto:info@ingerpetri.dk">info@ingerpetri.dk</a></p>
+            </div>
+          </div>
+        </div>
+        
+        <form class="contact-form fade-in delay-3">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Navn</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Emne</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Besked</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          
+          <button type="submit" class="accent-button">
+            Send besked
+            <span class="arrow">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-section">
+  <!-- Footer sektion ligesom på forsiden -->
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-newsletter">
+        <div class="newsletter-content">
+          <h3>Tilmeld dig mit nyhedsbrev</h3>
+          <p>Få inspiration, gode råd og information om kommende kurser og arrangementer direkte i din indbakke.</p>
+        </div>
+        <form class="newsletter-form">
+          <div class="form-group">
+            <input type="email" placeholder="Din e-mail adresse" required>
+            <button type="submit" class="accent-button">Tilmeld</button>
+          </div>
+          <label class="checkbox-container">
+            <input type="checkbox" required>
+            <span class="checkmark"></span>
+            <span class="checkbox-text">Jeg accepterer at modtage nyhedsbreve og er bekendt med <a href="#privatpolitik">privatpolitikken</a></span>
+          </label>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.jpg" alt="Inger Petri Logo" class="footer-logo">
+          <p>Certificeret Mastercoach med fokus på stresshåndtering, personlig udvikling og parterapi. Min mission er at hjælpe dig til at skabe positive forandringer i dit liv.</p>
+          <div class="social-links">
+            <a href="https://facebook.com/" class="social-link" aria-label="Facebook" target="_blank">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C18.34 21.21 22 17.06 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/" class="social-link" aria-label="LinkedIn" target="_blank">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com/" class="social-link" aria-label="Instagram" target="_blank">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Hurtig navigation</h4>
+          <ul>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="individuelt.html">Individuelle forløb</a></li>
+            <li><a href="parsamtaler.html">Parsamtaler</a></li>
+            <li><a href="stress.html">Stress - din krop taler</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Ressourcer</h4>
+          <ul>
+            <li><a href="#min-bog" id="min-bog">Min bog "Alting kan gå itu"</a></li>
+            <li><a href="#">Kurser og events</a></li>
+            <li><a href="#">Ofte stillede spørgsmål</a></li>
+            <li><a href="#">Meditation & øvelser</a></li>
+            <li><a href="https://mastercoachingerpetri.simplero.com/page/269397" target="_blank">Glad igen</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Kontakt information</h4>
+          <ul>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"/>
+              </svg>
+              <span>Rådhusstræde 6, 3520 Farum</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              <a href="tel:+4561760657">61 76 06 57</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <a href="mailto:info@ingerpetri.dk">info@ingerpetri.dk</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+              </svg>
+              <span>Åbningstider: Man-Fre: 9:00-17:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2025 Inger Petri. Alle rettigheder forbeholdes.</p>
+      <div class="footer-bottom-links">
+        <a href="#privatpolitik">Privatpolitik</a>
+        <a href="#cookies">Cookies</a>
+        <a href="#vilkaar">Vilkår & betingelser</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky Book knap -->
+<a href="#kontakt" class="sticky-book-button">
+  <div class="book-icon">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/>
+    </svg>
+  </div>
+  <span>Book tid</span>
+</a>
+
+<script>
+  // Simple animation for elements with fade-in class
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add active class to fade-in elements when page loads
+    setTimeout(function() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      fadeElements.forEach(function(element) {
+        element.classList.add('active');
+      });
+    }, 100);
+    
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileDrawer = document.querySelector('.mobile-drawer');
+    const mobileDrawerOverlay = document.querySelector('.mobile-drawer-overlay');
+    const drawerClose = document.querySelector('.drawer-close');
+    
+    if (mobileMenuToggle && mobileDrawer && mobileDrawerOverlay && drawerClose) {
+      mobileMenuToggle.addEventListener('click', function() {
+        mobileDrawer.classList.add('active');
+        mobileDrawerOverlay.classList.add('active');
+        document.body.classList.add('drawer-open');
+        this.classList.add('open');
+      });
+      
+      function closeDrawer() {
+        mobileDrawer.classList.remove('active');
+        mobileDrawerOverlay.classList.remove('active');
+        document.body.classList.remove('drawer-open');
+        mobileMenuToggle.classList.remove('open');
+      }
+      
+      drawerClose.addEventListener('click', closeDrawer);
+      mobileDrawerOverlay.addEventListener('click', closeDrawer);
+    }
+  });
+</script>
+
+</body>
+</html>
