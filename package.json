@@ -1,0 +1,12 @@
+{
+  "name": "inger-petri-website",
+  "version": "1.0.0",
+  "description": "Inger Petri Coaching & Terapi website",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": [],
+  "author": "Inger Petri",
+  "license": "ISC"
+}
