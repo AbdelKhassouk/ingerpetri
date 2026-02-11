@@ -5431,3 +5431,332 @@ body {
     height: 18px;
   }
 }
+/* Foredrag CTA Section */
+.foredrag-cta {
+  margin-top: 60px;
+  padding: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.foredrag-cta h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #2F4E52;
+}
+
+.foredrag-cta p {
+  font-size: 16px;
+  color: #445a5e;
+  line-height: 1.7;
+}
+
+.phone-link {
+  color: #4A7C88;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.phone-link:hover {
+  color: #E7C27B;
+}
+
+/* Individuelle Forløb Page Styles */
+.individuelle-hero {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, #F5F7F6 0%, #E8ECEA 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content-center {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-intro {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #445a5e;
+  margin-bottom: 35px;
+}
+
+/* Det får du Section */
+.det-faar-du-section {
+  padding: 80px 0;
+  background-color: #FAFBFA;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.benefit-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #4A7C88, #5a8c98);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  color: white;
+}
+
+.benefit-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2F4E52;
+  font-family: 'Playfair Display', serif;
+}
+
+.benefit-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #445a5e;
+}
+
+/* Forløb Steps Section */
+.forloeb-steps-section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.forloeb-steps {
+  margin-top: 50px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.forloeb-step {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.step-visual {
+  width: 150px;
+  height: 150px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-1-bg {
+  background: linear-gradient(135deg, #4A7C88, #5a8c98);
+}
+
+.step-2-bg {
+  background: linear-gradient(135deg, #E7C27B, #f0d08f);
+}
+
+.step-3-bg {
+  background: linear-gradient(135deg, #A8B8B0, #b8c8c0);
+}
+
+.step-4-bg {
+  background: linear-gradient(135deg, #d4a574, #e4b584);
+}
+
+.step-num {
+  font-size: 60px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  opacity: 0.9;
+}
+
+.step-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2F4E52;
+  font-family: 'Playfair Display', serif;
+}
+
+.step-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #445a5e;
+}
+
+/* Video Gallery Section */
+.video-gallery-section {
+  padding: 80px 0;
+  background-color: #F5F7F6;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.video-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.video-thumbnail {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.video-card:hover .video-thumbnail img {
+  transform: scale(1.1);
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover .play-button {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px 20px 10px;
+  color: #2F4E52;
+  font-family: 'Playfair Display', serif;
+}
+
+.video-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #445a5e;
+  padding: 0 20px 20px;
+}
+
+/* Responsive styles for Individuelle Forløb page */
+@media (max-width: 1024px) {
+  .forloeb-step {
+    grid-template-columns: 120px 1fr;
+    gap: 30px;
+  }
+
+  .step-visual {
+    width: 120px;
+    height: 120px;
+  }
+
+  .step-num {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .individuelle-hero {
+    padding: 80px 0 60px;
+  }
+
+  .hero-intro {
+    font-size: 16px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .forloeb-step {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .step-visual {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .foredrag-cta {
+    padding: 30px 25px;
+  }
+
+  .foredrag-cta h3 {
+    font-size: 24px;
+  }
+
+  .foredrag-cta p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-content h3 {
+    font-size: 20px;
+  }
+
+  .step-content p {
+    font-size: 15px;
+  }
+
+  .benefit-card h3 {
+    font-size: 20px;
+  }
+
+  .video-card h3 {
+    font-size: 18px;
+  }
+}
