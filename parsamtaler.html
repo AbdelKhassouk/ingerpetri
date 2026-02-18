@@ -3,45 +3,449 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parsamtaler | Inger Petri</title>
+  <title>Parsamtaler - Inger Petri</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="parsamtaler-styles.css">
+
+  <style>
+    /* Parsamtaler Page Specific Styles */
+
+    /* Simple Page Header */
+    .page-header-simple {
+      padding: 40px 0 20px;
+      background-color: #F5F7F6;
+    }
+
+    .page-title-large {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: #2F4E52;
+      margin: 0;
+      text-align: left;
+    }
+
+    /* Par Hero Section */
+    .par-hero-section {
+      padding: 60px 0 90px;
+      background: linear-gradient(135deg, #F5F7F6 0%, #E9F0ED 100%);
+      position: relative;
+    }
+
+    .par-hero-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .par-hero-content {
+      background: white;
+      padding: 45px;
+      border-radius: 16px;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    .par-hero-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: #2F4E52;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .par-hero-content p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #445a5e;
+      margin-bottom: 25px;
+    }
+
+    .par-hero-image {
+      position: relative;
+    }
+
+    .par-hero-image img {
+      width: 100%;
+      height: 550px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+      position: relative;
+      z-index: 2;
+    }
+
+    .image-decoration {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      width: 180px;
+      height: 180px;
+      border: 4px solid #E7C27B;
+      border-radius: 16px;
+      z-index: 1;
+    }
+
+    /* Question Section - REDESIGNED */
+    .par-question-section {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #E9F0ED 0%, #F5F7F6 100%);
+      position: relative;
+    }
+
+    .par-question-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(74, 124, 136, 0.15), transparent);
+    }
+
+    .question-wrapper {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .question-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 60px;
+    }
+
+    .question-intro h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      color: #2F4E52;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .question-intro p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #445a5e;
+      margin: 0;
+    }
+
+    .challenges-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .challenge-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      text-align: center;
+      border: 2px solid transparent;
+    }
+
+    .challenge-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(74, 124, 136, 0.15);
+      border-color: #4A7C88;
+    }
+
+    .challenge-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #4A7C88 0%, #2F4E52 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      transition: all 0.3s ease;
+    }
+
+    .challenge-card:hover .challenge-icon {
+      transform: scale(1.1);
+      background: linear-gradient(135deg, #E7C27B 0%, #d9b66f 100%);
+    }
+
+    .challenge-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: #2F4E52;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .challenge-card p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #445a5e;
+      margin: 0;
+    }
+
+    .question-cta {
+      text-align: center;
+      background: white;
+      padding: 50px 60px;
+      border-radius: 16px;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .question-cta p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #445a5e;
+      margin-bottom: 30px;
+    }
+
+    /* Text Section */
+    .par-text-section {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #F5F7F6 0%, #E9F0ED 100%);
+      position: relative;
+    }
+
+    .par-text-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(74, 124, 136, 0.15), transparent);
+    }
+
+    .par-text-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      padding: 50px 60px;
+      border-radius: 16px;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+    }
+
+    .par-text-content p {
+      font-size: 17px;
+      line-height: 1.9;
+      color: #445a5e;
+      margin-bottom: 25px;
+    }
+
+    /* CTA Section */
+    .par-cta-section {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #E9F0ED 0%, #F5F7F6 100%);
+      position: relative;
+    }
+
+    .par-cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(74, 124, 136, 0.15), transparent);
+    }
+
+    .par-cta-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      padding: 50px 60px;
+      border-radius: 16px;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+    }
+
+    .par-cta-content p {
+      font-size: 17px;
+      line-height: 1.9;
+      color: #445a5e;
+      margin-bottom: 25px;
+    }
+
+    .phone-link,
+    .email-link,
+    .link {
+      color: #4A7C88;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .phone-link:hover,
+    .email-link:hover,
+    .link:hover {
+      color: #E7C27B;
+      text-decoration: underline;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .par-hero-wrapper {
+        gap: 40px;
+      }
+
+      .challenges-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .page-title-large {
+        font-size: 36px;
+      }
+
+      .par-hero-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .par-hero-content {
+        padding: 35px 30px;
+      }
+
+      .par-hero-image img {
+        height: 400px;
+      }
+
+      .image-decoration {
+        width: 120px;
+        height: 120px;
+        bottom: -15px;
+        left: -15px;
+      }
+
+      .question-intro h2 {
+        font-size: 34px;
+      }
+
+      .challenges-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .challenge-card {
+        padding: 30px 25px;
+      }
+
+      .challenge-icon {
+        width: 60px;
+        height: 60px;
+      }
+
+      .question-cta {
+        padding: 35px 30px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .cta-buttons .outline-button,
+      .cta-buttons .accent-button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .par-text-wrapper,
+      .par-cta-wrapper {
+        padding: 35px 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page-title-large {
+        font-size: 32px;
+      }
+
+      .par-hero-content {
+        padding: 30px 20px;
+      }
+
+      .par-hero-content h2 {
+        font-size: 24px;
+      }
+
+      .question-intro h2 {
+        font-size: 28px;
+      }
+
+      .question-intro p {
+        font-size: 16px;
+      }
+
+      .challenge-card h3 {
+        font-size: 20px;
+      }
+
+      .challenge-card p {
+        font-size: 14px;
+      }
+
+      .question-cta {
+        padding: 30px 20px;
+      }
+
+      .question-cta p {
+        font-size: 16px;
+      }
+
+      .par-hero-image img {
+        height: 300px;
+      }
+
+      .image-decoration {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header class="site-header" id="top">
-        <div class="container nav-container">
-          <a href="index.html" class="logo">
-            <img src="images/logo.jpg" alt="Inger Petri Logo">
-          </a>
-          
-          <nav class="main-nav">
-            <ul class="nav-links">
-              <li class="nav-item has-dropdown">
-                <a href="#" class="nav-link">Samtaler og coaching <span class="dropdown-icon">▾</span></a>
-                <div class="dropdown-menu">
-                  <a href="coaching-page.html" class="dropdown-item">Individuelle forløb</a>
-                  <a href="parsamtaler.html" class="dropdown-item">Parsamtaler</a>
-                  <a href="stresspage.html" class="dropdown-item">Stress - din krop taler</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a href="bog.html" class="nav-link">Min bog</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://mastercoachingerpetri.simplero.com/page/269397" class="nav-link" target="_blank">Glad igen</a>
-              </li>
-            </ul>
-            <a href="#kontakt" class="cta-button">Kontakt mig</a>
-            <button class="mobile-menu-toggle" aria-label="Menu">
-              <span class="menu-bar"></span>
-              <span class="menu-bar"></span>
-              <span class="menu-bar"></span>
-            </button>
-          </nav>
-        </div>
-      </header>
+<header class="site-header" id="top">
+  <div class="container nav-container">
+    <a href="index.html" class="logo">
+      <img src="images/logo.jpg" alt="Inger Petri Logo">
+    </a>
+
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li class="nav-item has-dropdown">
+          <a href="#" class="nav-link">Samtaler og coaching <span class="dropdown-icon">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="individuelle-forloeb.html" class="dropdown-item">Individuelle forløb</a>
+            <a href="parsamtaler.html" class="dropdown-item">Parsamtaler</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="foredrag.html" class="nav-link">Foredrag</a>
+        </li>
+        <li class="nav-item">
+          <a href="bog.html" class="nav-link">Min bog</a>
+        </li>
+
+      </ul>
+      <a href="#kontakt" class="cta-button">Kontakt mig</a>
+      <button class="mobile-menu-toggle" aria-label="Menu">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
 
 <!-- Mobile Drawer Menu -->
 <div class="mobile-drawer">
@@ -51,22 +455,22 @@
     </a>
     <button class="drawer-close" aria-label="Luk menu">✕</button>
   </div>
-  
+
   <nav class="drawer-nav">
     <div class="drawer-section">
       <div class="drawer-section-header">
         <span>Samtaler og coaching</span>
       </div>
       <div class="drawer-section-content">
-        <a href="individuelt.html" class="drawer-link">Individuelle forløb</a>
+        <a href="individuelle-forloeb.html" class="drawer-link">Individuelle forløb</a>
         <a href="parsamtaler.html" class="drawer-link">Parsamtaler</a>
-        <a href="stress.html" class="drawer-link">Stress - din krop taler</a>
       </div>
     </div>
-    
-    <a href="#min-bog" class="drawer-link">Min bog</a>
+
+    <a href="foredrag.html" class="drawer-link">Foredrag</a>
+    <a href="bog.html" class="drawer-link">Min bog</a>
     <a href="https://mastercoachingerpetri.simplero.com/page/269397" class="drawer-link" target="_blank">Glad igen</a>
-    
+
     <div class="drawer-cta">
       <a href="#kontakt" class="cta-button drawer-button">Kontakt mig</a>
     </div>
@@ -75,175 +479,179 @@
 
 <div class="mobile-drawer-overlay"></div>
 
-<!-- Page Header -->
-<div class="page-header">
+<!-- Page Title -->
+<section class="page-header-simple">
   <div class="container">
-    <h1 class="page-title">Parsamtaler</h1>
-    <p class="page-subtitle">Genfind kærligheden og den dybe forbindelse i jeres forhold</p>
-  </div>
-</div>
-
-<!-- Intro Section -->
-<section class="relationship-intro">
-  <div class="container">
-    <div class="intro-content fade-in">
-      <h2 class="section-title">Sammen og hver for sig</h2>
-      <p class="intro-paragraph">
-        Mennesker er skabt til at leve sammen. Vi danner par, bygger rede, får måske børn og alt går sin naturlige gang. At leve sammen handler om at være noget med og for hinanden, men også at respektere at vi er to mennesker med hver sin historie, erfaringer og ønsker for, hvordan livet skal forme sig og hverdagen leves.
-      </p>
-      <p class="intro-paragraph">
-        Der er noget, vi er sammen om, der er noget, vi er ene om. Der er noget, som vi har ind ad til i parret og familien, og der er noget, vi har ud ad til og udenfor familien. Vi er enkeltindivider i par og i flok, hvilket naturligvis kan give udfordringer og uenigheder af og til.
-      </p>
-      <a href="#kontakt" class="accent-button mt-30">
-        Book en gratis og uforpligtende samtale
-        <span class="arrow">→</span>
-      </a>
-    </div>
-    <div class="intro-image fade-in delay-2">
-      <img src="par1.jpg"Parforhold og samtaler">
-    </div>
+    <h1 class="page-title-large fade-in">Parsamtaler</h1>
   </div>
 </section>
 
-<!-- Challenges Section -->
-<section class="challenges-section">
+<!-- Hero Section with Image and Text -->
+<section class="par-hero-section">
   <div class="container">
-    <h2 class="challenges-title fade-in">Udfordringer i alle parforhold</h2>
-    <div class="challenges-content fade-in delay-1">
-      <p class="intro-paragraph">
-        Nye, sammenbragte eller mangeårige parforhold har alle deres egne små eller store udfordringer og kriser gennem tiden, sådan er livet. Min erfaring som coach gennem mange år er, at vi som udgangspunkt kun ønsker hinanden det bedste, men at det ofte er svært for parret selv at løse situationen.
-      </p>
-      <p class="intro-paragraph">
-        Mest fordi de ikke får talt sammen, går med det i sig selv, tror noget om sig selv og den anden, og langsomt mister man sit selvværd og man føler sig måske ikke mere elsket, set eller forstået. Man begynder langsomt at lukke sig inde i sig selv. På det tidspunkt er parforholdet kørt fast.
-      </p>
-      <div class="quote-box">
-        <p class="quote-text">
-          Det er helt naturlige reaktioner i en presset situation, men det giver dårlig stemning, parforholdet lider og kærligheden er under maksimalt pres. Der er behov for hjælp udefra, og der skal nye vinkler på.
-        </p>
+    <div class="par-hero-wrapper">
+      <div class="par-hero-content fade-in delay-1">
+        <h2>Tag førertrøjen på – og bliv helten i dit eget liv</h2>
+        <p>Stress, partner eller forhold der er "af nøre indtil dig selv"? Jeg hjælper dig med at tage kontrollen tilbage og skabe det liv, du ønsker at leve – med eller uden ham eller hende.</p>
+        <a href="#kontakt" class="accent-button">
+          Book en gratis uforpligtende samtale
+          <span class="arrow">→</span>
+        </a>
       </div>
-      <p class="intro-paragraph">
-        Kriser og udfordringer opstår i alle parforhold, det er ikke et spørgsmål om det sker, men hvornår det sker. Og når det sker, handler det om at gøre noget ved det. Når man vil bevare og genskabe sit parforhold, ægteskab og genfinde anerkendelsen, værdsættelsen og kærligheden til hinanden, er opgaven at gøre det sammen og hjælpe hinanden med det.
-      </p>
-      <p class="intro-paragraph">
-        Det er altid muligt at redde samlivet og genfinde kærligheden til hinanden, hvis man vil det i sit hjerte og ved, hvorfor man vil det.
-      </p>
-    </div>
-  </div>
-</section>
 
-<!-- Tools Section -->
-<section class="tools-section">
-  <div class="container">
-    <h2 class="tools-title fade-in">Vejen til et stærkere parforhold</h2>
-    <p class="tools-intro fade-in delay-1">
-      Her vil jeg gerne hjælpe jer. I får samtaler, undervisning og værktøjer til at prøve at opbygge eller genopbygge det samliv, som I ønsker, ud fra dét, I hver især står for, dét I hver især har med jer i livet, eller dét I hver især har behov for.
-    </p>
-    <p class="tools-intro fade-in delay-1">
-      Parforhold, om de er nye eller mangeårige, har succes hos mig, når de lærer om:
-    </p>
-    
-    <div class="tools-grid">
-      <div class="tool-card fade-in">
-        <h3 class="tool-title">Kærlighedssprogene</h3>
-        <p class="tool-text">
-          Vi udtrykker og modtager kærlighed på forskellige måder. Lær at forstå hinandens kærlighedssprog, så I kan kommunikere jeres følelser på måder, der virkelig når ind til hinanden.
-        </p>
-      </div>
-      
-      <div class="tool-card fade-in delay-1">
-        <h3 class="tool-title">Samlivskontrakten</h3>
-        <p class="tool-text">
-          Usynlige forventninger kan skabe konflikter. Sammen udforsker vi jeres underforståede samlivskontrakt og hjælper jer med at skabe en bevidst og fælles forståelse af jeres forhold.
-        </p>
-      </div>
-      
-      <div class="tool-card fade-in delay-2">
-        <h3 class="tool-title">At ændre sin tankegang</h3>
-        <p class="tool-text">
-          Negative tankemønstre kan skade selv de bedste forhold. Lær at genkende destruktive tanker og erstatte dem med positive og opbyggende tanker om hinanden og jeres parforhold.
-        </p>
-      </div>
-      
-      <div class="tool-card fade-in delay-2">
-        <h3 class="tool-title">Kommunikation</h3>
-        <p class="tool-text">
-          God kommunikation er grundlaget for et sundt parforhold. Få konkrete værktøjer til at tale sammen på måder, der skaber forståelse, tillid og dybere forbindelse.
-        </p>
-      </div>
-      
-      <div class="tool-card fade-in delay-3">
-        <h3 class="tool-title">Samtalens kraft</h3>
-        <p class="tool-text">
-          Lær at have meningsfulde samtaler, der går ud over hverdagens praktikaliteter. Genopdag hinanden gennem dybe samtaler, der bringer jer tættere sammen og styrker jeres relation.
-        </p>
+      <div class="par-hero-image fade-in delay-2">
+        <img src="images/parsamtaler.jpeg" alt="Parsamtaler - Inger Petri">
+        <div class="image-decoration"></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Quotes Section -->
-<section class="quotes-section">
-  <div class="quotes-container">
-    <h2 class="quotes-title fade-in">Tanker om kærlighed</h2>
-    
-    <div class="quotes-grid">
-      <div class="quote-card fade-in">
-        <p class="quote-content">
-          "Det meste er værd at kæmpe for – vi skal bare gøre det sammen."
-        </p>
+<!-- Question Section - REDESIGNED -->
+<section class="par-question-section">
+  <div class="container">
+    <div class="question-wrapper">
+      <div class="question-intro fade-in">
+        <h2>Kan du genkende jeres samtaler?</h2>
+        <p>De fleste par oplever udfordringer i deres forhold. Her er nogle af de temaer, jeg ofte arbejder med:</p>
       </div>
-      
-      <div class="quote-card fade-in delay-1">
-        <p class="quote-content">
-          "Jeg har brug for din kærlighed, du har brug for min – men måske har jeg mest brug for at lære at elske mig selv."
-        </p>
+
+      <div class="challenges-grid">
+        <div class="challenge-card fade-in delay-1">
+          <div class="challenge-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+              <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+            </svg>
+          </div>
+          <h3>Kommunikation</h3>
+          <p>Svært at tale sammen uden at det ender i konflikter</p>
+        </div>
+
+        <div class="challenge-card fade-in delay-2">
+          <div class="challenge-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <h3>Intimitet</h3>
+          <p>Manglende nærhed og samhørighed i forholdet</p>
+        </div>
+
+        <div class="challenge-card fade-in delay-3">
+          <div class="challenge-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+            </svg>
+          </div>
+          <h3>Tillid</h3>
+          <p>Genopbygge tillid efter svigt eller kriser</p>
+        </div>
+
+        <div class="challenge-card fade-in delay-4">
+          <div class="challenge-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+            </svg>
+          </div>
+          <h3>Konflikter</h3>
+          <p>Samme skænderier der gentager sig igen og igen</p>
+        </div>
+
+        <div class="challenge-card fade-in delay-5">
+          <div class="challenge-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          </div>
+          <h3>Individuelle behov</h3>
+          <p>Balance mellem egne behov og forholdet</p>
+        </div>
+
+        <div class="challenge-card fade-in delay-6">
+          <div class="challenge-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+              <path d="M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z"/>
+            </svg>
+          </div>
+          <h3>Fremtiden</h3>
+          <p>Uenighed om mål, børn eller livsstil</p>
+        </div>
       </div>
-      
-      <div class="quote-card fade-in delay-2">
-        <p class="quote-content">
-          "Størst af alt er kærligheden – den tåler alt, overkommer alt og udholder alt."
-        </p>
-      </div>
-      
-      <div class="quote-card fade-in delay-3">
-        <p class="quote-content">
-          "Giv ud af din kærlighed – og du får tusind gange tilbage."
-        </p>
+
+      <div class="question-cta fade-in delay-7">
+        <p>Uanset hvilke udfordringer I står over for, er der håb. Jeg hjælper jer med at finde vejen fremad – sammen eller hver for sig.</p>
+        <a href="#kontakt" class="accent-button">
+          Book en uforpligtende samtale
+          <span class="arrow">→</span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA Banner -->
-<section class="cta-banner">
-  <div class="cta-container">
-    <h2 class="cta-title fade-in">Tag det første skridt sammen</h2>
-    <p class="cta-text fade-in delay-1">
-      Lad os tage en uforpligtende samtale om, hvordan jeg kan hjælpe jer tilbage til kærligheden og den dybe forbindelse. Sammen finder vi vejen frem.
-    </p>
-    <a href="#kontakt" class="cta-button fade-in delay-2">
-      Book en samtale for jer begge
-      <span class="arrow">→</span>
-    </a>
+<!-- Text Section -->
+<section class="par-text-section">
+  <div class="container">
+    <div class="par-text-wrapper">
+      <h2 class="section-title fade-in">Gør det lettere at være to eller at give slip</h2>
+
+      <div class="par-text-content">
+        <p class="fade-in delay-1">Der findes ikke en opskrift på det perfekte forhold. Ikke to mennesker er ens, og ikke to parforhold er ens. Min parterapi tager udgangspunkt i jeres behov og jeres situation – det kan handle om konflikter, mistillid eller manglende nærhed.</p>
+
+        <p class="fade-in delay-2">Det kan også være, at I overvejer at gå fra hinanden, eller allerede er blevet skilt og gerne vil lære at samarbejde endnu bedre. Både for jeres egen og eventuelle børns skyld.</p>
+
+        <p class="fade-in delay-3">Ved parterapi fokuserer vi ikke på, hvem der har ret, og hvem der er syndebuk. Jeg giver jer redskaber, så I kan lytte, tale og handle mere bevidst – uanset om I overvejer parterapi for at styrke og pleje forholdet, eller hvis I allerede står midt i noget, der gør ondt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="par-cta-section">
+  <div class="container">
+    <div class="par-cta-wrapper">
+      <h2 class="section-title fade-in">Book tid til parterapi i dag</h2>
+
+      <div class="par-cta-content">
+        <p class="fade-in delay-1">Ønsker I at høre mere om mit arbejde med parterapi? I er altid velkommen til at henvende jer, så I kan få besvaret alle spørgsmål – og være helt trygge ved at vælge mig.</p>
+
+        <p class="fade-in delay-2">Ring til mig direkte på <a href="tel:+4561760657" class="phone-link">61 76 06 57</a> eller send mig en SMS på samme telefonnummer. Du kan også skrive mig en mail på <a href="mailto:info@ingerpetri.dk" class="email-link">info@ingerpetri.dk</a>.</p>
+
+        <div class="cta-buttons fade-in delay-3">
+          <a href="tel:+4561760657" class="accent-button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            61 76 06 57
+          </a>
+          <a href="mailto:info@ingerpetri.dk" class="outline-button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Send email
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Contact Section -->
 <section id="kontakt" class="contact-section">
   <div class="container">
+    <h2 class="section-title text-center fade-in" style="margin-bottom: 60px;">Kontakt mig</h2>
     <div class="contact-wrapper">
       <div class="contact-image">
         <img src="images/iphjemme.jpg" alt="Inger Petri - Mastercoach">
       </div>
-      
+
       <div class="contact-content">
-        <h2 class="section-title fade-in">Kontakt mig</h2>
-        <p class="contact-intro fade-in delay-1">Book en gratis og uforpligtende samtale, hvor vi kan tale om jeres situation og hvordan jeg kan hjælpe jer. Sammen finder vi ud af, om parsamtaler er det rette for jer.</p>
-        
+        <p class="contact-intro fade-in delay-1">Som erfaren mastercoach tilbyder jeg parsamtaler der hjælper jer med at styrke jeres forhold. Har I brug for professionel støtte til at navigere udfordringer i jeres parforhold, er I kommet til det rette sted.</p>
+
         <div class="contact-info fade-in delay-2">
           <div class="contact-item">
             <div class="contact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
               </svg>
             </div>
@@ -252,10 +660,10 @@
               <p><a href="tel:+4561760657">61 76 06 57</a></p>
             </div>
           </div>
-          
+
           <div class="contact-item">
             <div class="contact-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
               </svg>
             </div>
@@ -265,30 +673,30 @@
             </div>
           </div>
         </div>
-        
+
         <form class="contact-form fade-in delay-3">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Navn</label>
               <input type="text" id="name" name="name" required>
             </div>
-            
+
             <div class="form-group">
               <label for="email">Email</label>
               <input type="email" id="email" name="email" required>
             </div>
           </div>
-          
+
           <div class="form-group">
             <label for="subject">Emne</label>
             <input type="text" id="subject" name="subject" required>
           </div>
-          
+
           <div class="form-group">
             <label for="message">Besked</label>
             <textarea id="message" name="message" rows="4" required></textarea>
           </div>
-          
+
           <button type="submit" class="accent-button">
             Send besked
             <span class="arrow">→</span>
@@ -300,7 +708,6 @@
 </section>
 
 <footer class="footer-section">
-  <!-- Footer sektion ligesom på forsiden -->
   <div class="footer-top">
     <div class="container">
       <div class="footer-newsletter">
@@ -322,7 +729,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="footer-main">
     <div class="container">
       <div class="footer-grid">
@@ -347,29 +754,27 @@
             </a>
           </div>
         </div>
-        
+
         <div class="footer-links">
           <h4>Hurtig navigation</h4>
           <ul>
             <li><a href="index.html">Hjem</a></li>
-            <li><a href="individuelt.html">Individuelle forløb</a></li>
+            <li><a href="individuelle-forloeb.html">Individuelle forløb</a></li>
             <li><a href="parsamtaler.html">Parsamtaler</a></li>
-            <li><a href="stress.html">Stress - din krop taler</a></li>
+            <li><a href="foredrag.html">Foredrag</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-links">
           <h4>Ressourcer</h4>
           <ul>
-            <li><a href="#min-bog" id="min-bog">Min bog "Alting kan gå itu"</a></li>
-            <li><a href="#">Kurser og events</a></li>
+            <li><a href="bog.html">Min bog "Alting kan gå itu"</a></li>
             <li><a href="#">Ofte stillede spørgsmål</a></li>
-            <li><a href="#">Meditation & øvelser</a></li>
             <li><a href="https://mastercoachingerpetri.simplero.com/page/269397" target="_blank">Glad igen</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-contact">
           <h4>Kontakt information</h4>
           <ul>
@@ -402,7 +807,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="footer-bottom">
     <div class="container">
       <p>&copy; 2025 Inger Petri. Alle rettigheder forbeholdes.</p>
@@ -415,7 +820,12 @@
   </div>
 </footer>
 
-<!-- Sticky Book knap -->
+<a href="#top" class="settings-button" aria-label="Til toppen">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+    <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+  </svg>
+</a>
+
 <a href="#kontakt" class="sticky-book-button">
   <div class="book-icon">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -424,6 +834,8 @@
   </div>
   <span>Book tid</span>
 </a>
+
 <script src="script.js"></script>
+
 </body>
 </html>
