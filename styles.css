@@ -5803,6 +5803,389 @@ body {
   }
 }
 
+/* Kærlighedssprog Page Styles */
+.kaerlighedssprog-hero {
+  padding: 120px 0 100px;
+  background: linear-gradient(135deg, #FBF8F3 0%, #F5F1E8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.kaerlighedssprog-hero::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: rgba(231, 194, 123, 0.08);
+}
+
+.kaerlighedssprog-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-label {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #d4a574;
+  margin-bottom: 20px;
+  padding: 8px 20px;
+  background: rgba(231, 194, 123, 0.15);
+  border-radius: 50px;
+}
+
+.kaerlighedssprog-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  color: #2F4E52;
+  font-weight: 700;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-gold {
+  color: #d4a574;
+}
+
+.hero-description {
+  font-size: 19px;
+  line-height: 1.8;
+  color: #445a5e;
+  margin-bottom: 40px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kaerlighedssprog-cta-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background: #E7C27B;
+  color: #2F4E52;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(231, 194, 123, 0.3);
+}
+
+.kaerlighedssprog-cta-btn:hover {
+  background: #d9b66f;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(231, 194, 123, 0.4);
+}
+
+.love-languages-intro-section {
+  padding: 100px 0 60px;
+  background: white;
+}
+
+.love-languages-intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-intro-large {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #445a5e;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.five-languages-section {
+  padding: 60px 0 100px;
+  background: white;
+}
+
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.language-card {
+  background: linear-gradient(135deg, #F5F7F6 0%, #E9F0ED 100%);
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.language-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(74, 124, 136, 0.15);
+  border-color: #E7C27B;
+}
+
+.language-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #4A7C88 0%, #2F4E52 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  transition: all 0.3s ease;
+}
+
+.language-card:hover .language-icon {
+  background: linear-gradient(135deg, #E7C27B 0%, #d9b66f 100%);
+  transform: rotate(360deg);
+}
+
+.language-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #2F4E52;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.language-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #445a5e;
+  margin: 0;
+}
+
+.misunderstandings-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #F5F7F6 0%, #E9F0ED 100%);
+}
+
+.misunderstandings-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.misunderstandings-example {
+  background: white;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-top: 50px;
+  border-left: 5px solid #E7C27B;
+}
+
+.misunderstandings-example p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #445a5e;
+  margin-bottom: 15px;
+}
+
+.misunderstandings-example p:last-child {
+  margin-bottom: 0;
+}
+
+.misunderstandings-example strong {
+  color: #2F4E52;
+  font-weight: 600;
+}
+
+.benefits-section-love {
+  padding: 100px 0;
+  background: white;
+}
+
+.benefits-love-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.benefit-love-card {
+  background: linear-gradient(135deg, #F5F7F6 0%, #E9F0ED 100%);
+  padding: 40px 35px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-love-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4A7C88, #E7C27B);
+  transition: all 0.3s ease;
+}
+
+.benefit-love-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(74, 124, 136, 0.15);
+}
+
+.benefit-love-card:hover::before {
+  height: 6px;
+}
+
+.benefit-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: rgba(231, 194, 123, 0.3);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.benefit-love-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #2F4E52;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.benefit-love-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #445a5e;
+  margin: 0;
+}
+
+.cta-love-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #FBF8F3 0%, #F5F1E8 100%);
+}
+
+.cta-love-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-love-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #445a5e;
+  margin: 30px auto 40px;
+  max-width: 750px;
+}
+
+.cta-love-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-love-buttons .accent-button,
+.cta-love-buttons .outline-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .languages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-love-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .kaerlighedssprog-hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-description {
+    font-size: 17px;
+  }
+
+  .languages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .language-card {
+    padding: 30px 25px;
+  }
+
+  .misunderstandings-example {
+    padding: 30px 25px;
+  }
+
+  .benefits-love-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-love-buttons {
+    flex-direction: column;
+  }
+
+  .cta-love-buttons .accent-button,
+  .cta-love-buttons .outline-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .kaerlighedssprog-hero {
+    padding: 80px 0 60px;
+  }
+
+  .kaerlighedssprog-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .language-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .language-card h3 {
+    font-size: 20px;
+  }
+
+  .language-card p {
+    font-size: 14px;
+  }
+
+  .benefit-number {
+    font-size: 38px;
+  }
+
+  .benefit-love-card h3 {
+    font-size: 20px;
+  }
+
+  .benefit-love-card p {
+    font-size: 14px;
+  }
+}
+
 /* Foredrag CTA Section */
 .foredrag-cta {
   margin-top: 60px;
